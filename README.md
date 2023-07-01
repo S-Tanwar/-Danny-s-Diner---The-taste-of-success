@@ -45,6 +45,7 @@ Recreate the following table output using the available data:
 
 2. Rank All The Things
 Danny also requires further information about the ranking of customer products, but he purposely does not need the ranking for non-member purchases so he expects null ranking values for the records when customers are not yet part of the loyalty program.
+
 ![Photo 3](https://github.com/S-Tanwar/-Danny-s-Diner---The-taste-of-success/assets/95356553/70ca53b7-810f-4173-a3e1-18762cd21c92)
 
 
