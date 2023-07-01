@@ -21,3 +21,7 @@ Danny has shared with you 3 key datasets for this case study:
 - members
 
 You can inspect the entity relationship diagram and example data below.
+
+### Entity Relationship Diagram
+![Photo 1](https://github.com/S-Tanwar/-Danny-s-Diner---The-taste-of-success/assets/95356553/72d6c22e-f917-4f37-ba45-043ab926e52b)
+
