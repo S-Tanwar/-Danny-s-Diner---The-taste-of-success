@@ -36,3 +36,16 @@ You can inspect the entity relationship diagram and example data below.
 8. What is the total items and amount spent for each member before they became a member?
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+
+### Bonus questions
+1. Join All The Things
+The following questions are related creating basic data tables that Danny and his team can use to quickly derive insights without needing to join the underlying tables using SQL.
+Recreate the following table output using the available data:
+![photo 2](https://github.com/S-Tanwar/-Danny-s-Diner---The-taste-of-success/assets/95356553/8a957579-4acf-4907-ab4e-39e456040b51)
+
+2. Rank All The Things
+Danny also requires further information about the ranking of customer products, but he purposely does not need the ranking for non-member purchases so he expects null ranking values for the records when customers are not yet part of the loyalty program.
+![Photo 3](https://github.com/S-Tanwar/-Danny-s-Diner---The-taste-of-success/assets/95356553/70ca53b7-810f-4173-a3e1-18762cd21c92)
+
+
+
