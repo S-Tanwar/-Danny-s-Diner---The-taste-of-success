@@ -1,3 +1,5 @@
+### CASE STUDY QUESTIONS
+
 --What is the total amount each customer spent at the restaurant?
 SELECT s.customer_id, SUM(m.price) AS total_amount_spent
 FROM sales s
@@ -86,3 +88,23 @@ JOIN menu m ON s.product_id = m.product_id
 JOIN members mem ON s.customer_id = mem.customer_id
 WHERE s.order_date >= '2021-01-01' AND s.order_date <= '2021-01-31'
 GROUP BY s.customer_id;
+
+### BONUS QUESTIONS
+-- Recreate the table 1 output using the available data:
+SELECT s.customer_id, s.order_date, m.product_name, m.price, CASE WHEN mem.customer_id IS NULL THEN 'N' ELSE 'Y' END AS member
+FROM sales s
+JOIN menu m ON s.product_id = m.product_id
+LEFT JOIN members mem ON s.customer_id = mem.customer_id AND s.order_date >= mem.join_date
+ORDER BY s.customer_id, s.order_date;
+
+-- Recreate the table 2 output using the available data:
+SELECT s.customer_id, s.order_date, m.product_name, m.price, 
+       CASE WHEN mem.customer_id IS NULL THEN 'N' ELSE 'Y' END AS member, 
+       CASE WHEN mem.customer_id IS NULL THEN NULL ELSE 
+            ROW_NUMBER() OVER (PARTITION BY s.customer_id, s.order_date, m.price 
+                               ORDER BY s.order_date) 
+       END AS ranking
+FROM sales s
+JOIN menu m ON s.product_id = m.product_id
+LEFT JOIN members mem ON s.customer_id = mem.customer_id AND s.order_date >= mem.join_date
+ORDER BY s.customer_id, s.order_date;
